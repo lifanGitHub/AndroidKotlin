@@ -50,7 +50,9 @@ dependencies {
     implementation 'com.squareup.okhttp3:okhttp:3.10.0'
     implementation 'com.squareup.okhttp3:mockwebserver:3.5.0'
     //tinker
-    annotationProcessor ("com.tinkerpatch.tinker:tinker-android-anno:1.9.11") //官网 provided
-    implementation("com.tinkerpatch.sdk:tinkerpatch-android-sdk:1.2.11") //官网 compile
+    implementation("com.tinkerpatch.sdk:tinkerpatch-android-sdk:${TINKERPATCH_VERSION}") { changing = true }
+
+    implementation 'com.google.guava:guava:19.0'
+    implementation "org.scala-lang:scala-library:2.11.7"
 
 }

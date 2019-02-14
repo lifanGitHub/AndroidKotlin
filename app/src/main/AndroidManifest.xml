@@ -45,11 +45,9 @@
         <service android:name=".service.demo3.My3Service" />
         <service android:name=".service.demo4.My4Service" />
         <service
-            android:name=".service.demo5.BroadcastService"
-            android:process=":remote" />
+            android:name=".service.demo5.BroadcastService"/>
         <service
-            android:name=".service.demo6.My6Service"
-            android:process=":remote" />
+            android:name=".service.demo6.My6Service"/>
 
         <receiver android:name=".service.demo5.NormalReceiver">
             <intent-filter>
