@@ -10,6 +10,7 @@ import kotlinx.coroutines.runBlocking
  * Date: 2020/7/13
  * Description:
  * 协程的优势: 创建1000_000个线程是很困难的 但是协程可以
+ * demo4会使用async表达
  */
 
 fun main() = runBlocking {
