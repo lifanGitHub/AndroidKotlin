@@ -8,7 +8,7 @@ import com.kotlin.lifan.androidkotlin.R
 import com.kotlin.lifan.androidkotlin.chess.ChessActivity
 import com.kotlin.lifan.androidkotlin.data_base.DBActivity
 import com.kotlin.lifan.androidkotlin.demo_list.DemoListActivity
-import com.kotlin.lifan.androidkotlin.item1.RecyclerActivity
+import com.kotlin.lifan.androidkotlin.recycler_view_demo.RecyclerActivity
 import com.kotlin.lifan.androidkotlin.my_view.SeekBarAc
 import com.kotlin.lifan.androidkotlin.service.ServiceActivity
 import com.kotlin.lifan.androidkotlin.surface_view.SurfaceMainActivity

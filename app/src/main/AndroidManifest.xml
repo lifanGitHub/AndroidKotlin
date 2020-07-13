@@ -17,9 +17,9 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".item1.RecyclerActivity"
+            android:name=".recycler_view_demo.RecyclerActivity"
             android:theme="@style/RecyclerActivityTheme" />
-        <activity android:name=".item1.StaggeredActivity" />
+        <activity android:name=".recycler_view_demo.StaggeredActivity" />
         <activity android:name=".service.ServiceActivity" />
         <activity android:name=".service.demo1.My1Activity" />
         <activity android:name=".service.demo2.My2Activity" />
