@@ -1,4 +1,4 @@
-package com.kotlin.lifan.androidkotlin.item1;
+package com.kotlin.lifan.androidkotlin.recycler_view_demo;
 
 import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;

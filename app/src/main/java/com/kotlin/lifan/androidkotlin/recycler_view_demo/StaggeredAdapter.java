@@ -1,4 +1,4 @@
-package com.kotlin.lifan.androidkotlin.item1;
+package com.kotlin.lifan.androidkotlin.recycler_view_demo;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -16,37 +16,37 @@ import java.util.Random;
 /**
  * Created by LiFan on 2016/11/8.
  */
-public class StaggeredAdapter2 extends RecyclerView.Adapter {
+public class StaggeredAdapter extends RecyclerView.Adapter {
     private Context context;
     private LayoutInflater layoutInflater;
     private List<String> data;
 
-    private List<Integer> width;
+    private List<Integer> heights;
 
-    public StaggeredAdapter2(Context context, List<String> data){
+    public StaggeredAdapter(Context context, List<String> data){
         this.context = context;
         this.data = data;
         this.layoutInflater = LayoutInflater.from(context);
-        width = new ArrayList<>();
+        heights = new ArrayList<>();
         Random random = new Random();
         for (int i=0; i<data.size(); i++){
-            width.add(100+random.nextInt(300));
+            heights.add(100+random.nextInt(300));
         }
     }
 
     @Override
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = layoutInflater.inflate(R.layout.simple_textview_t,parent,false);
-        MyViewHolder MyViewHolder = new MyViewHolder(view);
+        MyViewHolder MyViewHolder2 = new MyViewHolder(view);
 
-        return MyViewHolder;
+        return MyViewHolder2;
     }
 
     @Override
     public void onBindViewHolder(final RecyclerView.ViewHolder viewHolder, int position) {
         final MyViewHolder holder = (MyViewHolder) viewHolder;
         ViewGroup.LayoutParams lp = holder.tv.getLayoutParams();
-        lp.width = width.get(position);
+        lp.height = heights.get(position);
         holder.tv.setLayoutParams(lp);
         holder.tv.setText(data.get(position));
         holder.tv.setOnLongClickListener(new View.OnLongClickListener() {

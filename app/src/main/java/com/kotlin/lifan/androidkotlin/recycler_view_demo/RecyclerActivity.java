@@ -1,4 +1,4 @@
-package com.kotlin.lifan.androidkotlin.item1;
+package com.kotlin.lifan.androidkotlin.recycler_view_demo;
 
 import android.content.Context;
 import android.content.Intent;

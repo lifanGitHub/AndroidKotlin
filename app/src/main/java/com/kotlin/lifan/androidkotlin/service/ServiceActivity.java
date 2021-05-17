@@ -6,12 +6,6 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
 import com.kotlin.lifan.androidkotlin.R;
-import com.kotlin.lifan.androidkotlin.item1.RecyclerActivity;
-import com.kotlin.lifan.androidkotlin.service.demo1.My1Activity;
-import com.kotlin.lifan.androidkotlin.service.demo2.My2Activity;
-import com.kotlin.lifan.androidkotlin.service.demo3.My3Activity;
-import com.kotlin.lifan.androidkotlin.service.demo4.My4Activity;
-import com.kotlin.lifan.androidkotlin.service.demo5.My5Activity;
 import com.kotlin.lifan.androidkotlin.service.demo6.My6Activity;
 
 public class ServiceActivity extends AppCompatActivity {
