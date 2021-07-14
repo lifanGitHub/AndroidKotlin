@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:text="from JS ……"
+        android:id="@+id/text_view"
+        android:gravity="center"
+        android:textColor="#FFFFFF"
+        android:background="@color/colorDef"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"/>
+
+    <WebView
+        android:id="@+id/web_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>
