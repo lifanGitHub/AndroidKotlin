@@ -4,7 +4,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.util.Log;
 import android.webkit.JavascriptInterface;
 import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
@@ -14,7 +13,6 @@ import android.widget.TextView;
 
 import com.kotlin.lifan.androidkotlin.R;
 import com.kotlin.lifan.androidkotlin.base.BaseActivity;
-import com.kotlin.lifan.androidkotlin.base.MainActivity;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -38,21 +36,21 @@ public class WebActivity extends BaseActivity {
         settings.setSupportMultipleWindows(true);
 
         webview.addJavascriptInterface(new JSInterface(), "android"); // 向webview注册一个Java对象
-//        webview.setWebViewClient(new WebViewClient() {
-//            @Override
-//            public boolean shouldOverrideUrlLoading(WebView view, String url) {
-//                view.loadUrl(url);
-//                return true;
-//            }
-//
-//            @Override
-//            public void onPageFinished(WebView view, String url) {
-//                //注入一段JavaScript，该代码主要是调用Java对象的一个方法并将页面标题作为参数
+        webview.setWebViewClient(new WebViewClient() {
+            @Override
+            public boolean shouldOverrideUrlLoading(WebView view, String url) {
+                tvTitle.setText("捕获跳转"+url.toString());
+                return true;
+            }
+
+            @Override
+            public void onPageFinished(WebView view, String url) {
+                //注入一段JavaScript，该代码主要是调用Java对象的一个方法并将页面标题作为参数
 //                view.loadUrl("javascript:window.getTitle.onGetTitle("
 //                        + "document.getElementsByTagName('title')[0].innerHTML" + ");");
-//                super.onPageFinished(view, url);
-//            }
-//        });
+                super.onPageFinished(view, url);
+            }
+        });
 
         webview.setWebChromeClient(new WebChromeClient(){
             @Override
@@ -61,7 +59,7 @@ public class WebActivity extends BaseActivity {
             }
         });
 
-        webview.loadUrl("http://10.200.7.94:8848/VUE/index.html");
+        webview.loadUrl("http://10.200.14.201:8848/VUE/index.html");
 
     }
 
@@ -75,6 +73,11 @@ public class WebActivity extends BaseActivity {
         @JavascriptInterface
         public void loadText(String s) {
             tvTitle.setText(s);
+        }
+
+        @JavascriptInterface
+        public void intercept(){
+
         }
     }
 }
