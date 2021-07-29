@@ -1,8 +1,8 @@
 package com.kotlin.lifan.androidkotlin.recycler_view_demo;
 
 import android.os.Bundle;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.StaggeredGridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
 import com.kotlin.lifan.androidkotlin.base.BaseActivity;
 import com.kotlin.lifan.androidkotlin.R;

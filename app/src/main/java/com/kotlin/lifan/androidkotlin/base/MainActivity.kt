@@ -27,7 +27,7 @@ class MainActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        WebActivity.start(this)
+
         content.addView(ItemHome(this, "DemoList", View.OnClickListener { DemoListActivity.start(this) }))
         content.addView(ItemHome(this, "JS-Native交互", View.OnClickListener { WebActivity.start(this) }))
         content.addView(ItemHome(this, "RecyclerView", View.OnClickListener { RecyclerActivity.start(this) }))
