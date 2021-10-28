@@ -10,6 +10,7 @@ import com.kotlin.lifan.androidkotlin.base.ItemHome
 import com.kotlin.lifan.androidkotlin.R
 import com.kotlin.lifan.androidkotlin.dispatchevent.EventActivity
 import com.kotlin.lifan.androidkotlin.killapptest.KillActivity
+import com.kotlin.lifan.androidkotlin.threadview.ThreadPrintActivity
 import com.kotlin.lifan.androidkotlin.threadview.ThreadViewActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -33,5 +34,6 @@ class DemoListActivity : BaseActivity() {
         content.addView(ItemHome(this, "App持久化存储", View.OnClickListener { KillActivity.start(this) }))
         content.addView(ItemHome(this, "子线程刷新View", View.OnClickListener { ThreadViewActivity.start(this) }))
         content.addView(ItemHome(this, "点击事件传递", View.OnClickListener { EventActivity.start(this) }))
+        content.addView(ItemHome(this, "APP线程打印", View.OnClickListener { ThreadPrintActivity.start(this) }))
     }
 }
