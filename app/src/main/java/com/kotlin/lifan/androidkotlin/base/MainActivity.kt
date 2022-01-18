@@ -28,14 +28,11 @@ class MainActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        content.addView(ItemHome(this, "DemoList", View.OnClickListener { DemoListActivity.start(this) }))
-        content.addView(ItemHome(this, "JS-Native交互", View.OnClickListener { WebActivity.start(this) }))
         content.addView(ItemHome(this, "RecyclerView", View.OnClickListener { RecyclerActivity.start(this) }))
         content.addView(ItemHome(this, "Service", View.OnClickListener { ServiceActivity.start(this) }))
         content.addView(ItemHome(this, "Surface", View.OnClickListener { SurfaceMainActivity.start(this) }))
         content.addView(ItemHome(this, "五子棋", View.OnClickListener { ChessActivity.start(this) }))
-        content.addView(ItemHome(this, "SeekBar", View.OnClickListener { SeekBarAc.start(this) }))
-        content.addView(ItemHome(this, "数据库日志", View.OnClickListener { DBActivity.start(this) }))
+        content.addView(ItemHome(this, "小组件", View.OnClickListener { DemoListActivity.start(this) }))
 
     }
 }

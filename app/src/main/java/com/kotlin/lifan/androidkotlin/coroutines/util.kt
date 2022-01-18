@@ -26,7 +26,7 @@ import kotlinx.coroutines.*
 //}
 
 fun main() = runBlocking {
-    val job = GlobalScope.launch {
+    val job = launch {
         var i = 0
         while (true) {
             println(i++)
