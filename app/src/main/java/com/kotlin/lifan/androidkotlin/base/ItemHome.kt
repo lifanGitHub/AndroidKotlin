@@ -13,16 +13,16 @@ import kotlinx.android.synthetic.main.view_home_item.view.*
  */
 class ItemHome : FrameLayout {
 
-    constructor(context: Context?, text: String, onClickListener: OnClickListener) : super(context){
+    constructor(context: Context?, text: String, onClickListener: OnClickListener) : super(context!!){
         LayoutInflater.from(context).inflate(R.layout.view_home_item,this,true)
         button.text = text
         button.setOnClickListener(onClickListener)
     }
 
-    constructor(context: Context?) : super(context){
+    constructor(context: Context?) : super(context!!){
         LayoutInflater.from(context).inflate(R.layout.view_home_item,this,true)
     }
-    constructor(context: Context?, attrs: AttributeSet?) : super(context, attrs){
+    constructor(context: Context?, attrs: AttributeSet?) : super(context!!, attrs){
         LayoutInflater.from(context).inflate(R.layout.view_home_item,this,true)
     }
 
